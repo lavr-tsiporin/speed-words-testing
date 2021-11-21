@@ -1,7 +1,7 @@
 import React from 'react';
 import { Options } from "../Options/Options";
 
-export const Welcome = ({ onClickStart, status, setStatus }) => {
+export const Welcome = ({ onClickStart, setStatus }) => {
   return (
     <>
       <div className="flex start">
@@ -16,7 +16,7 @@ export const Welcome = ({ onClickStart, status, setStatus }) => {
           <h3 className="start__header">speed words</h3>
           <p className="start__phrase">Игра на скорость ввода слов</p>
         </div>
-        <Options status={status} setStatus={setStatus}/>
+        <Options setStatus={setStatus}/>
         <button className="button" onClick={onClickStart}>
           🔥 Начать
         </button>

@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Options.css'
 
-export const Options = React.memo(({ status, setStatus }) => {
+export const Options = ({ setStatus }) => {
+
+  const [checked, setChecked] = useState(true)
 
   const onChangeValue = e => {
     const { value } = e.target
+    setChecked(!checked)
     setStatus(value)
   }
 
@@ -13,23 +16,25 @@ export const Options = React.memo(({ status, setStatus }) => {
       <label>
         <input
           className="option-input radio"
+          name="options"
           type="radio"
           value="sentence"
-          checked={status === 'sentence'}
           onChange={onChangeValue}
+          checked={checked}
         />
         Предложения
       </label>
       <label>
         <input
           className="option-input radio"
+          name="options"
           type="radio"
           value="words"
-          checked={status === 'words'}
           onChange={onChangeValue}
+          checked={!checked}
         />
         Слова
       </label>
     </div>
   );
-});
+};
