@@ -30,7 +30,10 @@ export const Typing = ({ onFinish, status }) => {
       const result = status === 'words' ? _.shuffle(words) : randomText(sentence)
       wordsRef.current = result
       setData(prev => ({ ...prev, isLoading: false, currentWord: result[0] }))
-    }).catch(e => console.log(e))
+    }).catch(e => {
+      new Error(e)
+      //console.log(e)
+    })
   }, [status]);
 
   useEffect(() => {

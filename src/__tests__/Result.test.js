@@ -1,7 +1,7 @@
 import React from "react";
 
 import { render } from "@testing-library/react";
-import { Result } from './Result'
+import { Result } from '../components/Result/Result'
 import userEvent from "@testing-library/user-event";
 
 describe('component Result', () => {
@@ -31,7 +31,7 @@ describe('component Result', () => {
 
   it('call retryClick when click button', () => {
     const retryClick = jest.fn()
-    const {getByRole} = render(<Result stats={stabStats} onClickRetry={retryClick}/>)
+    const { getByRole } = render(<Result stats={stabStats} onClickRetry={retryClick}/>)
     const button = getByRole('button')
     userEvent.click(button)
     expect(retryClick).toHaveBeenCalledTimes(1)

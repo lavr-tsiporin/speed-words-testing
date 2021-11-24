@@ -1,8 +1,9 @@
 import React from "react";
 
 import { render, screen } from "@testing-library/react";
-import { Welcome } from "./Welcome";
 import userEvent from "@testing-library/user-event";
+
+import { Welcome } from "../components/Welcome/Welcome";
 
 describe('component Welcome', () => {
   describe('Game name', () => {

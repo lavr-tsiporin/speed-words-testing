@@ -5,8 +5,8 @@ export const Spin = () => {
   return (
     <>
       <div className="container">
-        <div className="loadingio-spinner-bean-eater-w7k3f8fi4md al-sf-c">
-          <div className="ldio-0jvswcsinamf">
+        <div className="loading-spinner-bean-eater aling-center">
+          <div className="spin">
             <div>
               <div></div>
               <div></div>

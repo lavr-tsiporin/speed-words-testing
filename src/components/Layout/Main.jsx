@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
-import { Result } from '../../components/Result/Result';
-import { Typing } from '../../components/Typing/Typing';
-import { Welcome } from '../../components/Welcome/Welcome';
+import { Result } from '../Result/Result';
+import { Typing } from '../Typing/Typing';
+import { Welcome } from '../Welcome/Welcome';
 
 export const Main = () => {
   const [step, setStep] = React.useState('welcome');
